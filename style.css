@@ -456,6 +456,188 @@ span.idade16{
     padding-left: 6px;
 }
 
+/*Rodape*/
+footer{
+    position: absolute;
+    width: 87.5%;
+    background: rgb(20, 20, 20); 
+    color: #ddd;
+    left: 110px;
+    margin-top: 82px;
+}
+
+.rodape{
+    display: flex;
+    bottom: 0px;
+}
+
+.rodape .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .content::after{
+    position: absolute;
+    content: '';
+    width: 15%;
+    height: 2px;
+    background: #f12020;
+    top: -10px;
+}
+
+.box .content:before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+    top: -10px;
+}
+
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a{
+    padding: 0 2px;
+}
+
+.left .content .social a span{
+    width: 40px;
+    height: 40px;
+    background: #000;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.left .content .social a span:hover{
+    background: #f12020;
+}
+
+.left .content p{
+    text-align: justify;
+}
+
+.center .content .fas{
+    font-size: 23px;
+    background: #1a1a1a;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover{
+    background: #f12020;
+}
+
+.center .content .text{
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .phone{
+    margin: 10px 0;
+}
+
+.center .content .msg{
+    margin-top: 10px;
+}
+
+.right form input, .right form textarea{
+    width: 100%;
+    font-size: 17px;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid#222222;
+}
+
+.rightform input{
+    height: 35px;
+}
+
+.right form input:focus,
+.right form textarea:focus{
+    outline-color: #3498db;
+}
+
+.right form .text{
+    font-size: 17px;
+    margin-bottom: 2px;
+    color: #656565;
+}
+
+.right formbtn{
+    margin-top: 10px;
+}
+
+.right form .btn button{
+    height: 40px;
+    width: 100%;
+    background: #f12020;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.right form.btn button hover{
+    background: #000;
+}
+
+.bottom .center{
+    padding: 5px;
+    font-size: 15px;
+    background: #151515;
+    text-align: center;
+}
+
+.bottom .center span{
+    color: #656565;
+}
+
+.bottom .center a{
+    color: #f12020;
+    text-decoration: none;
+}
+
+.bottom .center a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px){
+    footer{
+        position: absolute;
+        width: 100%;
+        left: 0px;
+    }
+    .rodape{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .rodape .box{
+        margin: 5px 0;
+    }
+}
+
 /*Pagina de Login*/
 .login{
     color: white;
