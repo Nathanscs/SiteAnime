@@ -80,6 +80,7 @@ body{
     display: none;
     left: 0;
     position: absolute;
+    z-index: 1;
 }
 
 .menu-h ul li:hover .genero{
@@ -404,7 +405,7 @@ span.idade16{
 .baixo{
     width: 94.9%;
     position: absolute;
-    margin-top: 76.24%;
+    margin-top: 95.84%;
     background-color: red;
     border: none;
     height: 1px;
@@ -463,7 +464,7 @@ footer{
     background: rgb(20, 20, 20); 
     color: #ddd;
     left: 110px;
-    margin-top: 82px;
+    margin-top: 470px;
 }
 
 .rodape{
