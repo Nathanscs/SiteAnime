@@ -1,0 +1,706 @@
+/*Pagina Principal*/
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body{
+    background-color: rgb(29, 29, 29);
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+.titulo {
+    color:rgb(255, 0, 0);
+    font-family: Permanent Marker;
+    font-size: 30px;
+    margin-left: 50px;
+    text-decoration: none;
+    margin-right: 300px;
+}
+
+.logo{
+    position: relative;
+    width: 170px;
+    top: 10px;
+    margin-right: 450px;
+}
+
+.menu-h{
+    background-color: rgb(20, 20, 20);
+}
+
+.menu-h ul{
+    max-width: 1800px;
+    list-style-type: none;
+    padding: 0;
+    background-color: rgb(20, 20, 20);
+    position: relative;
+}
+
+.menu-h ul li{
+    display: inline;
+    position: relative;
+}
+
+.menu-h ul li a{
+    color: rgb(255, 255, 255);
+    display: inline;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+    font-size: 15px;
+    font-family: "Questrial",sans-serif;
+}
+
+.menu-h ul li a:hover{
+    background-color: rgb(12, 12, 12);
+}
+
+#entrar{
+    float: right;
+    background-color: rgb(168, 0, 0);
+}
+#entrar:hover{
+    background-color: rgb(114, 2, 2);
+}
+
+/*Sub Menu*/
+.menu-h ul ul{
+    display: none;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.menu-h ul li:hover .genero{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+}
+
+.menu-h ul li:hover .anime{
+    display: block;
+}
+
+.menu-h ul li:hover .filme{
+    display: block;
+}
+
+.menu-h ul ul li a{
+    display: block;
+}
+
+/*Lançamentos*/
+.category{
+    margin-right: 0.5rem;
+}
+
+.category{
+    height: 10px;
+}
+
+.category h2{
+    color: #e5e5e5;
+    font-size: 18.5px;
+    font-family: "Questrial",sans-serif;;
+    line-height: 17px;
+    font-weight: 600;
+    margin-left: 82px;
+    top: 20px;
+    position: relative;
+    border-left: solid rgb(248, 0, 0);
+    padding-left: 6px;
+}
+
+.slider{
+    margin-top: 30px;
+    display: flex;
+    overflow: hidden;
+    position: static;
+    left: 3.75rem;
+    right: 0;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.slider .movie{
+    min-width: 12%;
+}
+
+.slider .movie img{
+    max-width: 100%;
+    padding-right: 5px;
+}
+
+.slider .movie a{
+    color: #999999;
+    font-size: 13.5px;
+    font-family: "Questrial",sans-serif;
+    line-height: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+/*
+.slider .movie a:hover{
+        position: absolute;
+        max-width: 13%;
+        opacity: 100%;
+}
+*/
+.cima{
+    width: 94.8%;
+    position: relative;
+    margin-top: 20.5%;
+    background-color: red;
+    border: none;
+    height: 1px;
+}
+.movie{
+    position: relative;
+    animation: slide 46s infinite ease-in-out;
+}
+
+@keyframes slide {
+    0%{right: 0px}
+    50%{right: 2160px}
+    100%{right: 0px;}
+}
+/*Novos Episodios*/
+/* .novos-eps{
+    margin-right: 0.5rem;
+    margin-top: 0%;
+}
+
+.novos-eps{
+    height: 10px;
+} */
+
+article{
+    display: inline-table;
+}
+
+.novos h2{
+    color: #e5e5e5;
+    font-size: 18.5px;
+    font-family: "Questrial",sans-serif;
+    line-height: 17px;
+    font-weight: 600;
+    margin-left: 116px;
+    top: 20px;
+    position: relative;
+    border-left: solid rgb(248, 0, 0);
+    padding-left: 6px;
+}
+
+.novos-episodios{
+    width: 100%;
+    float: left;
+    margin-bottom: 25px;
+    width: 1236px;
+    height: 1360.28;
+    margin-left: 111px;
+    margin-top: 27px;
+    background-color: rgb(20, 20, 20);
+}
+
+.episodio{
+    width: 306px;
+    height: 226.55;
+    padding: 0.4px;
+    /* background-color: red; */
+    margin-left: 0px;
+}
+
+.quadro-anime{
+    /* background-color: aqua; */
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.quadro-anime img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    -moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.2s;
+    cursor: pointer;
+}
+
+.quadro-anime:hover img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.2);
+    filter: blur(1.5px);
+}
+
+.nao-sei{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(.75);
+    text-shadow: 0 0 10px #000;
+    transition: all .5s ease-in-out;
+}
+
+.nao-sei a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.episodio .quadro-anime span.quality{
+    position: absolute;
+    top: 498.9px;
+    left: 116px;
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    line-height: 18px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+span.quality{
+    background: #ff4a39;
+    color: #fff;
+}
+
+.episodio .quadro-anime span.idade{
+    position: absolute;
+    top: 498.9px;
+    right: 1452px;
+    padding: 0 5px;
+    line-height: 18px;
+    font-size: 13px;
+    border-radius: 2px;
+}
+
+span.idade16{
+    color: #fff!important;
+    background: #fe0000!important;
+}
+
+.episodio .quadro-anime span.serie{
+    position: absolute;
+    bottom: 277px;
+    left: 116px;
+    padding: 3px 5px;
+}
+
+.episodio .quadro-anime span.serie{
+    background: #e74c3c;
+    color: #fff;
+}
+
+.data{
+    margin-top: 7px;
+}
+
+.data{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    /* background-color: rgb(9, 255, 0); */
+}
+
+.data h3, .data h3 a{
+    color: #fff;
+}
+
+.data h3{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 1px;
+    width: 100%;
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.data span.serie{
+    font-weight: 500;
+}
+
+.data span{
+    color: rgba(255,255,255,.5);
+}
+
+.data span{
+    float: left;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* .slide{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 18.8rem 18.8rem 18.8rem 18.8rem;
+    overflow: hidden;
+    position: static;
+    left: 3.75rem;
+    right: 0;
+    margin-left: 114px;
+}
+
+.eps{
+    overflow: hidden;
+    height:169.31px;
+    width: 301px;
+}
+
+.slide .eps{
+    min-width: 20%;
+}
+
+.slide .eps img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    padding-right: 10px;
+    transition: transform .5s ease;
+}
+
+.slide .eps a{
+    color: #999999;
+    font-size: 13.5px;
+    font-family: "Questrial",sans-serif;
+    line-height: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.slide .eps a:hover img{
+    transform: scale(1.2);
+    filter: blur(1.5px);
+} */
+
+/*
+.slide .eps a:hover{
+    position: absolute;
+    max-width: 18%;
+}
+*/
+
+.baixo{
+    width: 94.9%;
+    position: absolute;
+    margin-top: 95.84%;
+    background-color: red;
+    border: none;
+    height: 1px;
+    margin-left: 47.5px;
+}
+
+/*Melhores Animes*/
+
+.melhores{
+    width: 20%;
+    height: 10%;
+    margin-right: 6.65%;
+    margin-top: 0.54%;
+    list-style-type: none;
+}
+
+.m-animes li a img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.m-nome{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: -42px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    background-color: #000;
+    opacity: 70%;
+    position: static;
+    margin-bottom: 15px;
+    color: rgb(255, 255, 255);
+}
+
+
+.m-h2{
+    color: #e5e5e5;
+    font-size: 18.5px;
+    font-family: "Questrial",sans-serif;;
+    line-height: 17px;
+    font-weight: 600;
+    margin-left: 1367px;
+    top: 2px;
+    position: relative;
+    border-left: solid rgb(248, 0, 0);
+    padding-left: 6px;
+}
+
+/*Rodape*/
+footer{
+    position: absolute;
+    width: 87.5%;
+    background: rgb(20, 20, 20); 
+    color: #ddd;
+    left: 110px;
+    margin-top: 470px;
+}
+
+.rodape{
+    display: flex;
+    bottom: 0px;
+}
+
+.rodape .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .content::after{
+    position: absolute;
+    content: '';
+    width: 15%;
+    height: 2px;
+    background: #f12020;
+    top: -10px;
+}
+
+.box .content:before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+    top: -10px;
+}
+
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a{
+    padding: 0 2px;
+}
+
+.left .content .social a span{
+    width: 40px;
+    height: 40px;
+    background: #000;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.left .content .social a span:hover{
+    background: #f12020;
+}
+
+.left .content p{
+    text-align: justify;
+}
+
+.center .content .fas{
+    font-size: 23px;
+    background: #1a1a1a;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover{
+    background: #f12020;
+}
+
+.center .content .text{
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .phone{
+    margin: 10px 0;
+}
+
+.center .content .msg{
+    margin-top: 10px;
+}
+
+.right form input, .right form textarea{
+    width: 100%;
+    font-size: 17px;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid#222222;
+}
+
+.rightform input{
+    height: 35px;
+}
+
+.right form input:focus,
+.right form textarea:focus{
+    outline-color: #3498db;
+}
+
+.right form .text{
+    font-size: 17px;
+    margin-bottom: 2px;
+    color: #656565;
+}
+
+.right formbtn{
+    margin-top: 10px;
+}
+
+.right form .btn button{
+    height: 40px;
+    width: 100%;
+    background: #f12020;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.right form.btn button hover{
+    background: #000;
+}
+
+.bottom .center{
+    padding: 5px;
+    font-size: 15px;
+    background: #151515;
+    text-align: center;
+}
+
+.bottom .center span{
+    color: #656565;
+}
+
+.bottom .center a{
+    color: #f12020;
+    text-decoration: none;
+}
+
+.bottom .center a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px){
+    footer{
+        position: absolute;
+        width: 100%;
+        left: 0px;
+    }
+    .rodape{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .rodape .box{
+        margin: 5px 0;
+    }
+}
+
+/*Pagina de Login
+.login{
+    color: white;
+    margin: 50px;
+    padding: 0;
+    font-family: "Questrial",sans-serif;
+}
+
+.loginArea{
+    margin-left: 25px;
+    margin-top: 40px;
+}
+
+.cadastroArea{
+    margin-left: 25px;
+    margin-top: 50px;
+}
+
+label{
+    display: block;
+    margin-top: 20px;
+}
+
+.maiorTextArea{
+    font-size: 13px;
+    width: 270px;
+    padding: 4px;
+}
+
+.maiorOtherArea{
+    font-size: 13px;
+    padding: 4px;
+    width: 165px;
+}
+
+input{
+    outline: 0;
+}
+
+.termosLink{
+    color: white;
+    text-decoration: none;
+}
+
+.termosLink:hover{
+    text-decoration: underline;
+}
+
+.tituloLogin{
+    position: relative;
+    width: 350px;
+    right: 365px;
+    top: -10px;
+}
+
+button{
+    padding-left: 10px;
+    padding: 3px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color: #ddd;
+}*/
