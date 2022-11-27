@@ -1,78 +1,113 @@
 <!DOCTYPE html>
-<html>
-
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>Login</title>
-
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Patrick+Hand&family=Permanent+Marker&family=Teko:wght@300;400&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Patrick+Hand&family=Permanent+Marker&family=Teko:wght@300;400&display=swap" rel="stylesheet">
-        
-    </head>
-
-    <body class="login">
-        <div class="tituloLogin">
-            <a href="index.html" title="index" >
-                <img src="animetion.png" alt="AnimeTion" class="tituloLogin">
-            </a>
-            <br/>
-            
-        </div>
-
-        <div class="loginArea">
-            <h2>LOGIN</h2>
-            <form action="index.html" method="get">
-                <label for="login">Login:</label>
-                <input type="text" name="login" id="login" class="maiorTextArea" required/>
-
-                <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha" class="maiorOtherArea" required/>
-                <br/>
-                <button class="LoginBotton">Login</button>
-            </form>
-        </div>
-        
-        <br/>
-        <br/>
-
-        <div class="cadastroArea">
-            <h2>CADRASTO</h2>
-            <form action="index.html"> 
-                <label for="nome">Nome Completo:</label>
-                <input type="text" name="nome" id="nome" class="maiorTextArea" required minlength="2"/>
-
-                <label for="email">Email:</label>
-                <input type="text" name="email" id="email" class="maiorTextArea" pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" title="endereço de e-mail" required/>
-
-                <label for="senhaCadastro">Senha:</label>
-                <input type="password" name="senhaCadastro" id="senhaCadastro" class="maiorOtherArea" required manlength="8"/>
-
-                <label for="data">Data de nascimento:</label>
-                <input type="date" name="data" id="data" required/>
-
-                <label for="genero">Genero:</label>
-                <select name="genero" id="genero" required>
-                    <option></option>
-                    <option>Maculino</option>
-                    <option>Feminino</option>
-                    <option>Outro</option>
-                </select>
-                <br/>
-                <label>
-                    <input type="checkbox" id="termos" required/>
-                    Eu declaro que li e aceito os <a href="termos.html" target="_blank" title="termos" class="termosLink">termos de uso.</a>
-                </label>
-
-                <button>Cadastrar</button>
-            </form>
-        </div>
-        
-    </body>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AnimeTion</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">AnimeTion</h2>
+                <p class="description description-primary">Continue conectado com a gente</p>
+                <p class="description description-primary">Porfavor coloque suas informações pessoais</p>
+                <button id="signin" class="btn btn-primary">Entrar</button>
+            </div>    
+            <div class="second-column">
+                <h2 class="title title-second">Crie sua conta</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>        
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">Use seu email para cadastrar:</p>
+                <form class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Nome">
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+                    
+                    
+                    <button class="btn btn-second">Cadastrar</button>        
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">AnimeTion</h2>
+                <p class="description description-primary">Coloque seus dados pessoais</p>
+                <p class="description description-primary">E veja seus animes conosco</p>
+                <button id="signup" class="btn btn-primary">Cadastrar</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Entrar</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">Use seu email para entrar:</p>
+                <form class="form">
+                
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+                
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+                
+                    <a class="password" href="#">Esqueceu sua senha?</a>
+                    <button class="btn btn-second" href="index.html">Entrar</button>
+                </form>
+            </div><!-- second column -->
+        </div><!-- second-content -->
+    </div>
+    <script src="login.js"></script>
+</body>
 </html>
