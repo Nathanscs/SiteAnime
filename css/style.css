@@ -64,7 +64,7 @@ body{
 }
 
 .menu-h ul li a:hover{
-    background-color: rgb(12, 12, 12);
+    background-color: rgb(168, 0, 0);
 }
 
 #entrar{
@@ -140,6 +140,7 @@ body{
 .slider .movie img{
     max-width: 100%;
     padding-right: 5px;
+    max-width: 100%;
 }
 
 .slider .movie a{
@@ -391,10 +392,13 @@ a:-webkit-any-link {
 }
 
 .m-animes li a img{
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    width: 373px;
+    height: 149.19px;
     cursor: pointer;
     margin-bottom: 12px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .m-animes li a img:hover{
@@ -478,6 +482,10 @@ footer{
     top: -10px;
 }
 
+.left{
+    margin-left: 120px;
+}
+
 .left .content .social{
     margin: 20px 0 0 0;
 }
@@ -505,6 +513,10 @@ footer{
     text-align: justify;
 }
 
+.center{
+    margin-left: 120px;
+}
+
 .center .content .fas{
     font-size: 23px;
     background: #1a1a1a;
@@ -524,7 +536,7 @@ footer{
 .center .content .text{
     font-size: 17px;
     font-weight: 500;
-    padding-left: 10px;
+    padding-left: 0px;
 }
 
 .center .content .phone{
@@ -581,6 +593,8 @@ footer{
     font-size: 15px;
     background: #151515;
     text-align: center;
+    margin-right: -120px;
+    margin-left: -120px;
 }
 
 .bottom .center span{
