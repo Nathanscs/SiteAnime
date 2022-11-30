@@ -100,90 +100,7 @@ body{
     display: block;
 }
 
-/*Lançamentos*/
-.category{
-    margin-right: 0.5rem;
-}
-
-.category{
-    height: 10px;
-}
-
-.category h2{
-    color: #e5e5e5;
-    font-size: 18.5px;
-    font-family: "Questrial",sans-serif;;
-    line-height: 17px;
-    font-weight: 600;
-    margin-left: 82px;
-    top: 20px;
-    position: relative;
-    border-left: solid rgb(248, 0, 0);
-    padding-left: 6px;
-}
-
-.slider{
-    margin-top: 30px;
-    display: flex;
-    overflow: hidden;
-    position: static;
-    left: 3.75rem;
-    right: 0;
-    margin-left: 80px;
-    margin-right: 80px;
-}
-
-.slider .movie{
-    min-width: 12%;
-}
-
-.slider .movie img{
-    max-width: 100%;
-    padding-right: 5px;
-}
-
-.slider .movie a{
-    color: #999999;
-    font-size: 13.5px;
-    font-family: "Questrial",sans-serif;
-    line-height: 17px;
-    font-weight: 600;
-    text-decoration: none;
-}
-.slider .movie a:hover{
-        position: absolute;
-        max-width: 195px;
-        margin-left: 4px;
-        opacity: 100%;
-}
-
-.cima{
-    width: 94.8%;
-    position: relative;
-    margin-top: 20.5%;
-    background-color: red;
-    border: none;
-    height: 1px;
-}
-.movie{
-    position: relative;
-    animation: slide 46s infinite ease-in-out;
-}
-
-@keyframes slide {
-    0%{right: 0px}
-    50%{right: 2160px}
-    100%{right: 0px;}
-}
-/*Novos Episodios*/
-/* .novos-eps{
-    margin-right: 0.5rem;
-    margin-top: 0%;
-}
-
-.novos-eps{
-    height: 10px;
-} */
+/*Novos*/
 
 .novos h2{
     color: #e5e5e5;
@@ -320,73 +237,13 @@ a:-webkit-any-link {
     overflow: hidden;
 }
 
-/* .slide{
-    margin-top: 25px;
-    display: grid;
-    grid-template-columns: 18.8rem 18.8rem 18.8rem 18.8rem;
-    overflow: hidden;
-    position: static;
-    left: 3.75rem;
-    right: 0;
-    margin-left: 114px;
-}
-
-.eps{
-    overflow: hidden;
-    height:169.31px;
-    width: 301px;
-}
-
-.slide .eps{
-    min-width: 20%;
-}
-
-.slide .eps img{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    padding-right: 10px;
-    transition: transform .5s ease;
-}
-
-.slide .eps a{
-    color: #999999;
-    font-size: 13.5px;
-    font-family: "Questrial",sans-serif;
-    line-height: 17px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.slide .eps a:hover img{
-    transform: scale(1.2);
-    filter: blur(1.5px);
-} */
-
-/*
-.slide .eps a:hover{
-    position: absolute;
-    max-width: 18%;
-}
-*/
-
-.baixo{
-    width: 94.9%;
-    position: absolute;
-    margin-top: 79.71%;
-    background-color: red;
-    border: none;
-    height: 1px;
-    margin-left: 47.5px;
-}
-
 /*Melhores Animes*/
 
 .melhores{
     width: 20%;
     height: 10%;
     margin-right: 6.65%;
-    margin-top: -11px;
+    margin-top: 4px;
     list-style-type: none;
 }
 
@@ -423,10 +280,29 @@ a:-webkit-any-link {
     line-height: 17px;
     font-weight: 600;
     margin-left: 1367px;
-    top: -19px;
+    top: -3px;
     position: relative;
     border-left: solid rgb(248, 0, 0);
     padding-left: 6px;
+}
+
+.baixo{
+    width: 94.9%;
+    position: absolute;
+    margin-top: 9%;
+    background-color: red;
+    border: none;
+    height: 1px;
+    margin-left: 47.5px;
+}
+
+.pagina h3{
+    color: rgb(214, 214, 214);
+}
+
+.pagina h3 a{
+    text-decoration: none;
+    color: #fff;
 }
 
 /*Rodape*/
@@ -610,69 +486,3 @@ footer{
         margin: 5px 0;
     }
 }
-
-/*Pagina de Login
-.login{
-    color: white;
-    margin: 50px;
-    padding: 0;
-    font-family: "Questrial",sans-serif;
-}
-
-.loginArea{
-    margin-left: 25px;
-    margin-top: 40px;
-}
-
-.cadastroArea{
-    margin-left: 25px;
-    margin-top: 50px;
-}
-
-label{
-    display: block;
-    margin-top: 20px;
-}
-
-.maiorTextArea{
-    font-size: 13px;
-    width: 270px;
-    padding: 4px;
-}
-
-.maiorOtherArea{
-    font-size: 13px;
-    padding: 4px;
-    width: 165px;
-}
-
-input{
-    outline: 0;
-}
-
-.termosLink{
-    color: white;
-    text-decoration: none;
-}
-
-.termosLink:hover{
-    text-decoration: underline;
-}
-
-.tituloLogin{
-    position: relative;
-    width: 350px;
-    right: 365px;
-    top: -10px;
-}
-
-button{
-    padding-left: 10px;
-    padding: 3px;
-    font-size: 15px;
-    margin-top: 10px;
-}
-
-button:hover{
-    background-color: #ddd;
-}*/
