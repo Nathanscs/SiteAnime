@@ -105,7 +105,7 @@ body{
 .category {
     max-width: 1100px;
     margin: 0 auto 20px;
-    margin-left: 100px;
+    margin-left: 170px;
     margin-top: 30px;
 }
 
@@ -198,7 +198,7 @@ body{
     width: 20%;
     height: 10%;
     margin-right: 6.65%;
-    margin-top: -637px;
+    margin-top: -705px;
     list-style-type: none;
 }
 
@@ -238,7 +238,7 @@ body{
     line-height: 17px;
     font-weight: 600;
     margin-left: 1367px;
-    top: -645px;
+    top: -710px;
     position: relative;
     border-left: solid rgb(248, 0, 0);
     padding-left: 6px;
@@ -247,7 +247,7 @@ body{
 .baixo{
     width: 94.9%;
     position: absolute;
-    margin-top: 19%;
+    margin-top: 3.3%;
     background-color: red;
     border: none;
     height: 1px;
@@ -274,7 +274,7 @@ footer{
     /*background: rgb(20, 20, 20);*/
     color: #ddd;
     left: 110px;
-    margin-top: 370px;
+    margin-top: 70px;
 }
 
 .rodape{

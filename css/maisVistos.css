@@ -1,0 +1,566 @@
+/*Pagina Principal*/
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body{
+    background-color: rgb(29, 29, 29);
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+
+.titulo {
+    color:rgb(255, 0, 0);
+    font-family: Permanent Marker;
+    font-size: 30px;
+    margin-left: 50px;
+    text-decoration: none;
+    margin-right: 300px;
+}
+
+.logo{
+    position: relative;
+    width: 170px;
+    top: 10px;
+    margin-right: 450px;
+}
+
+.menu-h{
+    background-color: rgb(20, 20, 20);
+}
+
+.menu-h ul{
+    max-width: 1800px;
+    list-style-type: none;
+    padding: 0;
+    background-color: rgb(20, 20, 20);
+    position: relative;
+}
+
+.menu-h ul li{
+    display: inline;
+    position: relative;
+}
+
+.menu-h ul li a{
+    color: rgb(255, 255, 255);
+    display: inline;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+    font-size: 15px;
+    font-family: "Questrial",sans-serif;
+}
+
+.menu-h ul li a:hover{
+    background-color: rgb(168, 0, 0);
+}
+
+#entrar{
+    float: right;
+    background-color: rgb(168, 0, 0);
+}
+#entrar:hover{
+    background-color: rgb(114, 2, 2);
+}
+
+/*Sub Menu*/
+.menu-h ul ul{
+    display: none;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.menu-h ul li:hover .genero{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+}
+
+.menu-h ul li:hover .anime{
+    display: block;
+}
+
+.menu-h ul li:hover .filme{
+    display: block;
+}
+
+.menu-h ul ul li a{
+    display: block;
+}
+
+/*Abecedario*/
+
+.abc{
+    margin-top: 10px;
+    /*background-color: rgb(20, 20, 20);*/
+}
+
+.abc ul{
+    max-width: 1800px;
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+}
+
+.abc ul li{
+    display: inline;
+    position: relative;
+    left: 170px;
+}
+
+.abc ul li a{
+    color: rgb(255, 255, 255);
+    display: inline;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+    font-size: 15px;
+    font-family: "Questrial",sans-serif;
+}
+
+.abc ul li a:hover{
+    background-color: rgb(168, 0, 0);
+}
+
+/*Animes*/
+
+.category {
+    max-width: 1280px;
+    margin: 0 auto 20px;
+    margin-left: 100px;
+    margin-top: 3px;
+}
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+.slider {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: calc(20.1% - 10px);
+    margin-right: 0px;
+    margin-bottom: 3%;
+    float: left;
+    min-width: 100px;
+    min-height: 100px;
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.movie a {
+    width: 100%;
+    position: relative;
+}
+
+.movie img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 0.6s;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.slider{
+    float: left;
+    margin-bottom: 25px;
+    width: 1236px;
+    height: 1360.28;
+    margin-top: 27px;
+    /*background-color: rgb(20, 20, 20);*/
+}
+
+.episodio{
+    width: 306px;
+    height: 226.55;
+    padding: 0.4px;
+    /* background-color: red; */
+    margin-left: 0px;
+}
+
+.movie:hover img {
+	/*-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.2);*/
+    cursor: pointer;
+    transform: scale(1.3) rotate(5deg);
+}
+
+.data{
+    margin-top: 7px;
+}
+
+.data{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    position: absolute;
+    /* background-color: rgb(9, 255, 0); */
+}
+
+.data h3, .data h3 a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.data h3{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 1px;
+    width: 100%;
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.data span{
+    color: rgba(255,255,255,.5);
+}
+
+.data span{
+    float: left;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*Melhores Animes*/
+
+.melhoresa{
+    width: 20%;
+    height: 10%;
+    margin-top: 40px;
+    list-style-type: none;
+    margin-left: 100px;
+}
+
+.m-animesa li a img{
+    width: 1200px;
+    height: 290.19px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.m-animesa li a img:hover{
+    filter: blur(0.8px);
+}
+
+/*Melhores Animes*/
+
+.melhores{
+    width: 20%;
+    height: 10%;
+    margin-right: 6.65%;
+    margin-top: -2464px;
+    list-style-type: none;
+}
+
+.m-animes li a img{
+    max-width: 100%;
+    width: 373px;
+    height: 149.19px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.m-animes li a img:hover{
+    filter: blur(0.8px);
+}
+
+.m-nomea{
+    width: 100%;
+    height: auto;
+    margin-top: -210px;
+    margin-left: 600px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 0.8px;
+}
+
+.m-nome{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: -42px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    background-color: #000;
+    opacity: 70%;
+    position: static;
+    margin-bottom: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.m-h2{
+    color: #e5e5e5;
+    font-size: 18.5px;
+    font-family: "Questrial",sans-serif;;
+    line-height: 17px;
+    font-weight: 600;
+    margin-left: 1367px;
+    top: -2470px;
+    position: relative;
+    border-left: solid rgb(248, 0, 0);
+    padding-left: 6px;
+}
+
+.baixo{
+    width: 94.9%;
+    position: absolute;
+    margin-top: 64.5%;
+    background-color: red;
+    border: none;
+    height: 1px;
+    margin-left: 47.5px;
+}
+
+.pagina{
+    margin-top: 12px;
+}
+
+.pagina h3{
+    color: rgb(214, 214, 214);
+}
+
+.pagina h3 a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/*Rodape*/
+footer{
+    position: absolute;
+    width: 87.5%;
+    /*background: rgb(20, 20, 20);*/
+    color: #ddd;
+    left: 110px;
+    margin-top: 1210px;
+}
+
+.rodape{
+    display: flex;
+    bottom: 0px;
+}
+
+.rodape .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .content::after{
+    position: absolute;
+    content: '';
+    width: 15%;
+    height: 2px;
+    background: #f12020;
+    top: -10px;
+}
+
+.box .content:before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+    top: -10px;
+}
+
+.left{
+    margin-left: 120px;
+}
+
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a{
+    padding: 0 2px;
+}
+
+.left .content .social a span{
+    width: 40px;
+    height: 40px;
+    background: #000;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.left .content .social a span:hover{
+    background: #f12020;
+}
+
+.left .content p{
+    text-align: justify;
+}
+
+.center{
+    margin-left: 120px;
+}
+
+.center .content .fas{
+    font-size: 23px;
+    background: #1a1a1a;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover{
+    background: #f12020;
+}
+
+.center .content .text{
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .phone{
+    margin: 10px 0;
+}
+
+.center .content .msg{
+    margin-top: 10px;
+}
+
+.right form input, .right form textarea{
+    width: 100%;
+    font-size: 17px;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid#222222;
+}
+
+.rightform input{
+    height: 35px;
+}
+
+.right form input:focus,
+.right form textarea:focus{
+    outline-color: #3498db;
+}
+
+.right form .text{
+    font-size: 17px;
+    margin-bottom: 2px;
+    color: #656565;
+}
+
+.right formbtn{
+    margin-top: 10px;
+}
+
+.right form .btn button{
+    height: 40px;
+    width: 100%;
+    background: #f12020;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.right form.btn button hover{
+    background: #000;
+}
+
+.bottom .center{
+    padding: 5px;
+    font-size: 15px;
+    background: #151515;
+    text-align: center;
+}
+
+.bottom .center span{
+    color: #656565;
+}
+
+.bottom .center a{
+    color: #f12020;
+    text-decoration: none;
+}
+
+.bottom .center a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px){
+    footer{
+        position: absolute;
+        width: 100%;
+        left: 0px;
+    }
+    .rodape{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .rodape .box{
+        margin: 5px 0;
+    }
+}
