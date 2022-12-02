@@ -133,6 +133,8 @@ div {
     min-width: 100px;
     min-height: 100px;
     overflow: hidden;
+    background-color: rgb(168, 0, 0);;
+    opacity: 1;
 }
 
 a {
@@ -158,6 +160,7 @@ a:-webkit-any-link {
     transition: all 0.6s;
     box-sizing: border-box;
     max-width: 100%;
+    opacity: 0.09;
 }
 
 .slider{
@@ -182,11 +185,14 @@ a:-webkit-any-link {
 	-webkit-transform: scale(1.1);
 	transform: scale(1.2);*/
     cursor: pointer;
-    transform: scale(1.3) rotate(5deg);
+    transform: scale(1.3);
+    opacity: 0.6;
 }
 
 .data{
-    margin-top: 7px;
+    text-align: center;
+    margin-left: -815px;
+    margin-top: -180px;
 }
 
 .data{
@@ -198,13 +204,14 @@ a:-webkit-any-link {
 }
 
 .data h3, .data h3 a{
-    color: #fff;
+    color: rgb(224, 224, 224);
     text-decoration: none;
+    font-family: 'Nerko One', cursive;
 }
 
 .data h3{
     font-weight: 500;
-    font-size: 14px;
+    font-size: 34px;
     line-height: 20px;
     margin-bottom: 1px;
     width: 100%;

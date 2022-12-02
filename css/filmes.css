@@ -108,6 +108,10 @@ body{
     /*background-color: rgb(20, 20, 20);*/
 }
 
+.a{
+    background-color: rgb(168, 0, 0);
+}
+
 .abc ul{
     max-width: 1800px;
     list-style-type: none;
