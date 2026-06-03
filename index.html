@@ -1,215 +1,826 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SportHub</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="viewport" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0f7a3a">
+        <title>AnimeTion</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+        <link rel="manifest" href="icon/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Patrick+Hand&family=Permanent+Marker&family=Teko:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Patrick+Hand&family=Permanent+Marker&family=Teko:wght@300;400&display=swap" rel="stylesheet">
+        
+    </head>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body data-theme="dark">
-    <!-- Menu Drawer Overlay -->
-    <div id="drawer-overlay" class="drawer-overlay"></div>
-
-    <!-- Menu Side Drawer -->
-    <aside id="menu-drawer" class="menu-drawer">
-        <div class="drawer-header">
-            <div class="drawer-logo">
-                <img src="Logo.png" alt="SportHub Logo" class="logo-img-small">
-                <span class="logo-text-small">Sport<span class="highlight">Hub</span><span class="dot">.</span></span>
-            </div>
-            <button id="close-drawer-btn" class="close-btn" aria-label="Fechar Menu">&times;</button>
-        </div>
-        <div class="drawer-content">
-            <!-- Theme Toggle -->
-            <button id="theme-toggle" class="drawer-btn">
-                <span>🌓 Alternar Tema</span>
-            </button>
-
-            <!-- Authentication / User Actions -->
-            <div class="auth-section">
-                <button id="login-btn" class="drawer-btn login-btn">
-                    <span>🔑 Entrar com Google</span>
-                </button>
-
-                <div id="user-info" class="user-info-container hidden">
-                    <div class="user-profile">
-                        <img id="user-avatar" src="" alt="Avatar" class="user-avatar-img">
-                        <span class="user-label">Conectado</span>
-                    </div>
-                    <button id="logout-btn" class="drawer-btn logout-btn">
-                        <span>🚪 Sair</span>
-                    </button>
+    <body>
+        <nav class="menu-h">
+            <ul>
+                <a href="index.html"><img src="img/animetion.png" alt="AnimeTion" class="logo"></a>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="animes.html">Animes</a>
+                    <ul class="anime">
+                        <li><a href="#">Dublado</a></li>
+                        <li><a href="#">Legendado</a></li>
+                        <li><a href="#">Melhor avaliado</a></li>
+                        <li><a href="#">Lançamento</a></li>
+                    </ul>
+                </li>
+                <li><a href="filmes.html">Filmes</a>
+                    <ul class="filme">
+                        <li><a href="#">Dublado</a></li>
+                        <li><a href="#">Legendado</a></li>
+                        <li><a href="#">Melhor avaliado</a></li>
+                        <li><a href="#">Lançamento</a></li>
+                    </ul>
+                </li>
+                <li><a href="genero.html">Gênero</a>
+                    <ul class="genero">
+                        <li><a href="#">Ação</a></li>
+                    <li><a href="#">Comédia</a></li>
+                    <li><a href="#">Drama</a></li>
+                    <li><a href="#">Esporte</a></li>
+                    <li><a href="#">Aventura</a></li>
+                    <li><a href="#">Terror</a></li>
+                    <li><a href="#">Crime</a></li>
+                    <li><a href="#">Demônio</a></li>
+                    <li><a href="#">Escolar</a></li>
+                    <li><a href="#">Magia</a></li>
+                    <li><a href="#">Shounen</a></li>
+                    <li><a href="#">Slice of life</a></li>
+                    <li><a href="#">Mistério</a></li>
+                    <li><a href="#">Ecchi</a></li>
+                    <li><a href="#">Ficção Cientifica</a></li>        
+                    <li><a href="#">Seinen</a></li>
+                    <li><a href="#">Histórico</a></li>
+                    <li><a href="#">Fantasia</a></li>
+                    <li><a href="#">Shoujo</a></li>
+                    <li><a href="#">Mecha</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html" id="entrar">Entrar/Cadastrar</a></li>
+            </ul>
+        </nav>
+        
+        <div class="category">
+            <a  href="lancamentos.html"><h2>Lançamentos</h2></a>
+            <div class="slider">
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://img1.ak.crunchyroll.com/i/spire4/8056a82e973dde98ebb82abd39dc69731564519729_full.jpg" alt="One Piece">
+                    One piece</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://picfiles.alphacoders.com/459/459491.jpg" alt="Kimetsu no Yaiba">
+                    Kimetsu no Yaiba</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://reviewzeiro.files.wordpress.com/2014/02/steinsgate.jpg?w=640" alt="Steins;Gate">
+                    Steins;Gate</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://img1.ak.crunchyroll.com/i/spire1/78916dd5588a8ff3cd244e5deca7aa781607261114_full.jpg" alt="Attack on Titan">
+                    Attack on Titan</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://1.bp.blogspot.com/-y2F3lk0709U/WpL9kEybB3I/AAAAAAAAB8E/JLpXm6ScYj4UC91xhgrKQ1zjb5wcIwXQwCEwYBhgL/s1600/cbb55a6382682bf71e91f685c6473c5a1487736090_full.jpg" alt="Hunter x Hunter">
+                    Hunter x Hunter</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://img.betaseries.com/7EXeQ2Ho2iS8j0Xdn3JDgpfldjA=/600x900/smart/https%3A%2F%2Fpictures.betaseries.com%2Ffonds%2Fposter%2Fc90f257bf5a4706f5bfde3559781f692.jpg" alt="Hellsing">
+                    Hellsing</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg" alt="Fullmetal Alchemist">
+                    Fullmetal Alchemist</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://img1.ak.crunchyroll.com/i/spire2/e81af69b67788b5bfda50b2789bbc7ee1481243074_full.jpg" alt="Noragami">
+                    Noragami</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/be611b65eb36149005789b740efc7a36.jpeg" alt="Kuroko no Basket">
+                    Kuroko no Basket</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/uJ7cHITmM83XWAntdi0GZ1bGePI.jpg" alt=" Castlevania">
+                    Castlevania</a>
+                </div>
+                
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="http://4.bp.blogspot.com/-6Pj2F1ZhNNw/WBEk1LJEF_I/AAAAAAAAAA4/QVayHNpyP18hI3zp26vKsE5l-_HJ8QmugCK4B/s1600/3727644b109279e2cb405ac89b0f293f1452549294_full.jpg" alt="Erased">
+                    Erased</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://img1.ak.crunchyroll.com/i/spire4/5568ffb263f6bcba85a639980b80dd9a1612993223_full.jpg" alt="Naruto">
+                    Naruto</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://img1.ak.crunchyroll.com/i/spire3/9e1a4846885dc3994414b608f80490781531935326_full.jpg" alt="Overlord">
+                    Overlord</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://3.bp.blogspot.com/-SfxHoQuzdO0/WlvakafWtoI/AAAAAAAAB2I/q0lwTcsC6xkyPuHivS_Nm9PfxjSnG11DgCEwYBhgL/s1600/gurrenlagann.jpg" alt="Gurren Lagann">
+                    Gurren Lagann</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://i.pinimg.com/originals/47/7e/b0/477eb0703caf779d9d748bc390b66ceb.jpg" alt="Berserk">
+                    Berserk</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://i.pinimg.com/736x/fc/ef/eb/fcefeb78e984e807eabb0553574591b9.jpg" alt="Charlotte">
+                    Charlotte</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://m.media-amazon.com/images/M/MV5BYmU2MzEyMjAtOTQ5Yy00NGMxLTg0NmItMTQ0ZTM5OGY0NjUzXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg" alt="Dr. Stone">
+                    Dr. Stone</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://i.pinimg.com/originals/b3/c2/f1/b3c2f10b1e7483424218b34058c96ee5.png" alt="The Promised Neverland">
+                    The Promised Neverland</a>
+                </div>
+                <div class="movie">
+                    <a href="paginaAnime.html"><img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/480x720/catalog/crunchyroll/af5f2304138a2ebe9caf5b7d0b1e2f01.jpeg" alt="Haikyuu!!">
+                    Haikyuu</a>
                 </div>
             </div>
         </div>
-    </aside>
 
-    <header>
-        <div class="logo">
-            <img src="Logo.png" alt="SportHub Logo" class="logo-img">
-            <span class="logo-text">Sport<span class="highlight">Hub</span><span class="dot">.</span></span>
+        <hr class="cima"/> 
+            <div class="novos-eps">
+                <header class="novos">
+                    <a  href="novos.html"><h2>Novos Episodios</h2></a>
+                </header>
+                <div class="epsTitulo">
+                </div>
+                <div class="novos-episodios">
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Chainsaw Man</a>
+                                    </h3>
+                                    <span class="serie">Episódio 8</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Shinobi no Ittoki</a>
+                                    </h3>
+                                    <span class="serie">Episódio 9</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Pokemon (2019)</a>
+                                    </h3>
+                                    <span class="serie">Episódio 133</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Shinmai Renkinjutsushi no Tenpo Keiei</a>
+                                    </h3>
+                                    <span class="serie">Episódio 9</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Bleach: Sennen Kessen-hen</a>
+                                    </h3>
+                                    <span class="serie">Episódio 8</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Digimon Ghost Game</a>
+                                    </h3>
+                                    <span class="serie">Episódio-53</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Yowamushi Pedal: Limit Break</a>
+                                    </h3>
+                                    <span class="serie">Episódio-7</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Mobile Suit Gundam: The Witch from Mercury</a>
+                                    </h3>
+                                    <span class="serie">Episódio 8</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Fuufu Ijou, Koibito Miman</a>
+                                    </h3>
+                                    <span class="serie">Episódio 8</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Baraou no Souretsu</a>
+                                    </h3>
+                                    <span class="serie">Episódio 24</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Fumetsu no Anata e 2</a>
+                                    </h3>
+                                    <span class="serie">Episódio 6</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Boruto</a>
+                                    </h3>
+                                    <span class="serie">Episódio 277</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">One Piece</a>
+                                    </h3>
+                                    <span class="serie">Episódio 1042</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Utawarerumono: Futari no Hakuoro</a>
+                                    </h3>
+                                    <span class="serie">Episódio 23</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Blue Lock</a>
+                                    </h3>
+                                    <span class="serie">Episódio 8</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Golden Kamuy 4</a>
+                                    </h3>
+                                    <span class="serie">Episódio 6</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Spy x Family</a>
+                                    </h3>
+                                    <span class="serie">Episódio 21</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Boku no Hero Academia 6</a>
+                                    </h3>
+                                    <span class="serie">Episódio 9</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Arknights: Reimei Zensou</a>
+                                    </h3>
+                                    <span class="serie">Episódio 5</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Muv-Luv Alternative 2nd Season</a>
+                                    </h3>
+                                    <span class="serie">Episódio 8</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Fuuto Tantei</a>
+                                    </h3>
+                                    <span class="serie">Episódio 12</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Kyoukai Senki</a>
+                                    </h3>
+                                    <span class="serie">Episódio 25</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Isekai Ojisan</a>
+                                    </h3>
+                                    <span class="serie">Episódio 1</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="quadro-anime">
+                        <a href="episodio.html" title="One Piece - Episódio 100000">
+                            <div class="epsImagem">
+                                <img src="https://carrosselgeek.com.br/wp-content/uploads/2022/08/Carrossel-Geek-Imagem-Destacada-Lista-com-Animes-Curtos.jpg.webp" title="One Piece - Episódio 100000" alt="One Piece - Episódio 100000">
+                                <div class="nao-sei">
+                            
+                                </div>
+                            </div>
+                            <div>
+                                <div class="data">
+                                    <h3>
+                                        <a href="episodio.html">Shoot! Goal to the Future</a>
+                                    </h3>
+                                    <span class="serie">Episódio 12</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            
+            <!-- <div class="slide">
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="One Piece">
+                    One piece</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://s2.glbimg.com/rIFvmdy5OKTM1Ixl6ux75fq4ZPw=/0x0:1920x1080/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/8/U/EiZACpS1SjX5ejoGUM9Q/guilherme-bbb-20.jpg" alt="Kimetsu no Yaiba">
+                    Kimetsu no Yaiba</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Steins;Gate">
+                    Steins;Gate</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="anuncio.png" alt="Attack on Titan">
+                    Attack on Titan</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://s2.glbimg.com/rIFvmdy5OKTM1Ixl6ux75fq4ZPw=/0x0:1920x1080/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/8/U/EiZACpS1SjX5ejoGUM9Q/guilherme-bbb-20.jpg" alt="Hunter x Hunter">
+                    Hunter x Hunter</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Hellsing">
+                    Hellsing</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="anuncio.png" alt="Noragami">
+                    Noragami</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Kuroko no Basket">
+                    Kuroko no Basket</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Charlotte">
+                    Charlotte</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="anuncio.png" alt="Erased">
+                    Erased</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Naruto">
+                    Naruto</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Overlord">
+                    Overlord</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="anuncio.png" alt="Erased">
+                    Erased</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Naruto">
+                    Naruto</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Overlord">
+                    Overlord</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="One Piece">
+                    One piec</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Kimetsu no Yaiba">
+                    Kimetsu no Yaiba</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Steins;Gate">
+                    Steins;Gate</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Attack on Titan">
+                    Attack on Titan</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Hunter x Hunter">
+                    Hunter x Hunter</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Hellsing">
+                    Hellsing</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Noragami">
+                    Noragami</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Kuroko no Basket">
+                    Kuroko no Basket</a>
+                </div>
+                <div class="eps">
+                    <a href=""><img src="https://i.ytimg.com/vi/jc1qVUNQYqU/maxresdefault.jpg" alt="Charlotte">
+                    Charlotte</a>
+                </div>
+            </div> -->
         </div>
-        <button id="hamburger-btn" class="hamburger-btn" aria-label="Abrir Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-
-    <main>
-        <section class="featured-carousel-section">
-            <div class="carousel-header">
-                <h2>Destaque de Hoje</h2>
-                <div class="carousel-nav">
-                    <button id="carousel-prev" class="carousel-arrow" aria-label="Anterior">‹</button>
-                    <button id="carousel-next" class="carousel-arrow" aria-label="Próximo">›</button>
-                </div>
-            </div>
-            <div class="carousel-container">
-                <div id="carousel-track" class="carousel-track">
-                    <div class="carousel-loading">Carregando jogos em destaque...</div>
-                </div>
-            </div>
-        </section>
-
-        <div class="content-grid">
-            <aside>
-                <h3>Esportes</h3>
-                <div class="search-bar">
-                    <input type="text" id="global-search" placeholder="Pesquisar campeonatos...">
-                </div>
-                <ul id="sports-list"></ul>
-
-                <h3>Ligas Favoritas</h3>
-                <ul id="favorites-list"></ul>
-            </aside>
-
-            <section class="calendar-container">
-                <div class="panel-header">
-                    <div class="view-tabs" role="tablist" aria-label="Visualização">
-                        <button class="tab active" id="tab-list" data-view="list" role="tab" aria-controls="view-list"
-                            aria-selected="true">📋 Lista</button>
-                        <button class="tab" id="tab-calendar" data-view="calendar" role="tab"
-                            aria-controls="view-calendar" aria-selected="false">🗓️ Calendário</button>
-                    </div>
-                    <div class="panel-actions">
-                        <button id="refresh-events" class="ghost" title="Atualizar eventos">↻ Atualizar</button>
-                    </div>
-                </div>
-
-                <div id="view-list" class="view view-active" role="tabpanel" aria-labelledby="tab-list">
-                    <div class="upcoming-header">
-                        <h3>Próximos jogos</h3>
-                        <div id="upcoming-subtitle" class="upcoming-sub">Baseado nas ligas favoritas</div>
-                    </div>
-                    <div id="upcoming-list" class="upcoming-list"></div>
-                </div>
-
-                <div id="view-calendar" class="view" role="tabpanel" aria-labelledby="tab-calendar">
-                    <div id="calendar"></div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- Match Details Modal -->
-    <div id="details-modal" class="modal-overlay hidden">
-        <div class="modal-card">
-            <div class="modal-header">
-                <span id="modal-sport-badge" class="modal-sport-badge">⚽ FUTEBOL</span>
-                <button id="modal-close" class="modal-close-btn" aria-label="Fechar">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-league-info" id="modal-league-name">La Liga</div>
-                <div class="modal-match-title">
-                    <span id="modal-team-a" class="modal-team-name">Real Madrid</span>
-                    <span class="modal-vs">VS</span>
-                    <span id="modal-team-b" class="modal-team-name">Barcelona</span>
-                </div>
-
-                <hr class="modal-divider">
-
-                <div class="modal-info-grid">
-                    <div class="modal-info-item">
-                        <span class="info-label">📍 Onde vai ser</span>
-                        <span class="info-value" id="modal-venue">Estádio Santiago Bernabéu (Madrid)</span>
-                    </div>
-                    <div class="modal-info-item">
-                        <span class="info-label">📺 Onde assistir no Brasil</span>
-                        <span class="info-value" id="modal-tv">ESPN e Disney+</span>
-                    </div>
-                    <div class="modal-info-item full-width">
-                        <span class="info-label">📊 Status na Temporada</span>
-                        <span class="info-value" id="modal-stats">-</span>
-                    </div>
-                    <div class="modal-info-item">
-                        <span class="info-label">📅 Data e Horário (Brasília)</span>
-                        <span class="info-value" id="modal-datetime">-</span>
-                    </div>
-                    <div class="modal-info-item">
-                        <span class="info-label">🎲 Probabilidades de Vitória</span>
-                        <span class="info-value" id="modal-odds">-</span>
-                    </div>
-                </div>
-
-                <div class="modal-stats-container">
-                    <h4 class="modal-stats-title">📊 Comparativo das Equipes</h4>
-                    <div class="comparison-grid">
-                        <!-- Column Headers -->
-                        <div class="comp-header-blank"></div>
-                        <div class="comp-header-team-a" id="modal-comp-name-a">Time A</div>
-                        <div class="comp-header-team-b" id="modal-comp-name-b">Time B</div>
-                        
-                        <!-- Row 1: Posição -->
-                        <div class="comp-row-label" id="modal-comp-pos-label">🏆 Posição na Liga</div>
-                        <div class="comp-val-a" id="modal-comp-pos-a">-</div>
-                        <div class="comp-val-b" id="modal-comp-pos-b">-</div>
-
-                        <!-- Row 2: Últimos 5 Jogos -->
-                        <div class="comp-row-label" id="modal-comp-form-label">📈 Forma Recente</div>
-                        <div class="comp-val-a" id="modal-comp-form-a">-</div>
-                        <div class="comp-val-b" id="modal-comp-form-b">-</div>
-
-                        <!-- Row 3: Artilheiro / Destaque -->
-                        <div class="comp-row-label" id="modal-comp-scorer-label">⚽ Artilheiro</div>
-                        <div class="comp-val-a" id="modal-comp-scorer-a">-</div>
-                        <div class="comp-val-b" id="modal-comp-scorer-b">-</div>
-                        
-                        <!-- Row 4: Média de Gols / Pontos -->
-                        <div class="comp-row-label" id="modal-comp-metric-label">🥅 Média de Gols</div>
-                        <div class="comp-val-a" id="modal-comp-metric-a">-</div>
-                        <div class="comp-val-b" id="modal-comp-metric-b">-</div>
-                    </div>
-
-                    <!-- Confrontos Diretos Box -->
-                    <div class="h2h-box">
-                        <div class="h2h-title" id="modal-h2h-title-label">⚔️ Confrontos Diretos (Histórico H2H)</div>
-                        <div class="h2h-stats-row">
-                            <span id="modal-h2h-wins-a">-</span>
-                            <span id="modal-h2h-draws">-</span>
-                            <span id="modal-h2h-wins-b">-</span>
+        <hr class="baixo"/>
+        <a href="maisVistos.html"><h2 class="m-h2">Mais Vistos</h2></a>
+        <div class="melhores">
+            <ul class="m-animes">
+                <li>
+                    <a href="maisVistos.html"><img src="https://www.torredevigilancia.com/wp-content/uploads/2017/07/5265-SeriesHeaders_OP_2000x800.jpg" alt="">
+                        <div class="m-nome">
+                            <h4>One Piece</h4>
                         </div>
-                        <div class="h2h-bar-container">
-                            <div class="h2h-bar-a" id="modal-h2h-bar-a" style="width: 33.3%;"></div>
-                            <div class="h2h-bar-draw" id="modal-h2h-bar-draw" style="width: 33.3%;"></div>
-                            <div class="h2h-bar-b" id="modal-h2h-bar-b" style="width: 33.3%;"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="maisVistos.html"><img src="https://i.pinimg.com/originals/3c/1f/7f/3c1f7fbc2616b88c74255417eeea8ff3.jpg" alt="">
+                        <div class="m-nome">
+                            <h4>Jujutsu kaisen</h4>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="maisVistos.html"><img src="https://onecineplex.com/wp-content/uploads/2021/01/Demon-Slayer-Web-Banner-1.jpg" alt="">
+                        <div class="m-nome">
+                            <h4>Kimetsu no Yaiba</h4>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="maisVistos.html"><img src="https://pbs.twimg.com/media/EmUDqnCXUAApiTV?format=jpg&name=large" alt="">
+                        <div class="m-nome">
+                            <h4>Black Clover</h4>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="maisVistos.html"><img src="https://i0.wp.com/otakusbrasil.com/wp-content/uploads/2021/03/spy-x-family.jpg?fit=2000800&ssl=1" alt="">
+                        <div class="m-nome">
+                            <h4>Spy x Family</h4>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="maisVistos.html"><img src="https://muramasa.com.br/wp-content/uploads/2022/07/bleach-a-guerra-sangrenta-dos-mil-anos.webp" alt="">
+                        <div class="m-nome">
+                            <h4>Bleach</h4>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="maisVistos.html"><img src="https://kanto.legiaodosherois.com.br/w728-h381-gnw-cfill-gcc-f:fbcover/wp-content/uploads/2021/11/legiao_IjQBWcKURn9w.png.webp" alt="">
+                        <div class="m-nome">
+                            <h4>Hunter x Hunter</h4>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="maisVistos.html"><img src="https://culturedvultures.com/wp-content/uploads/2022/11/Blue-Lock-anime.jpg" alt="">
+                        <div class="m-nome">
+                            <h4>Blue Lock</h4>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- <a href="#" class="melhores-t1"><h4>One Piece</h4></a>
+        <a href="#" class="melhores-t2"><h4>Jujutsu kaisen</h4></a>
+        <a href="#" class="melhores-t3"><h4>Kimetsu no Yaiba</h4></a>
+        <a href="#" class="melhores-t4"><h4>Black Clover</h4></a>
+        <a href="#" class="melhores-t5"><h4>Spy x Family</h4></a> -->
+        <footer>
+            <div class="rodape">
+                <div class="left box">
+                    <h2>Sobre nós</h2>
+                    <div class="content">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptate nisi at ipsam unde hic qui maiores quos sunt. Ipsa fugit quisquam soluta iste. Temporibus, veniam? Quaerat voluptatem est dolorem.</p>
+                    
+                        <div class="social">
+                            <a href="#"><span class="fab fa-facebook-f"></span></a>
+                            <a href="#"><span class="fab fa-twitter"></span></a>
+                            <a href="#"><span class="fab fa-instagram"></span></a>
+                            <a href="#"><span class="fab fa-youtube"></span></a>
                         </div>
                     </div>
                 </div>
+                <div class="center box">
+                    <h2>Endereço</h2>
+                    <div class="content">
+                        <div class="place">
+                            <span class="fas fa-map-maker"></span>
+                            <span class="text">Rua Arlindo Diniz da Fonseca, Jardim Féo - Teresópolis, RJ</span>
+                        </div>
+                        <div class="phone">
+                            <span class="fas fas fa-phone-alt"></span>
+                            <span class="text">+55 21 96663-8271</span>
+                        </div>
+                        <div class="email">
+                            <span class="fas fa-envelope"></span>
+                            <span class="text">Animetion@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rigth box">
+                    <h2>Contato</h2>
+                    <div class="content">
+                        <form action="#">
+                            <div class="email">
+                                <div class="text">Email </div>
+                                <input type="email" required>
+                            </div>
+                            <div class="msg">
+                                <div class="text">Mensagem </div>
+                                <textarea cols="25" rows="2" required></textarea>
+                            </div>
+                            <div class="btn">
+                                <button type="submit">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+            <div class="bottom">
+                <div class="center">
+                    <span class="credit">Criado por <a href="https://nathanscs.github.io/portifolio/">NWGL</a></span>
+                    <span class="far fa-copyright">2022 Todos os direitos reservados</span>
+                </div>
+            </div>
+        </footer>
 
-    <script type="module" src="app.js"></script>
-</body>
-
+    </body>
 </html>
